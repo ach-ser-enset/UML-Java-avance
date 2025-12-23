@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ConsultationController">
+    <Label text="Gestion des Consultations" styleClass="title"/>
+    <HBox spacing="10">
+        <ComboBox fx:id="patientCombo" promptText="Patient"/>
+        <DatePicker fx:id="dateConsultationPicker" promptText="Date"/>
+        <TextField fx:id="motifField" promptText="Motif"/>
+    </HBox>
+    <TextArea fx:id="remarqueArea" promptText="Remarque" prefRowCount="2"/>
+    <Button text="Ajouter Consultation" onAction="#handleAddConsultation"/>
+    <ListView fx:id="consultationList"/>
+</VBox>
